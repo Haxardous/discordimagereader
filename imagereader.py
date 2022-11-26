@@ -31,6 +31,8 @@ def check_message_content(text):
                     for alt_keyword in messages_agenda[alt_message]["keywords"]:
                         if alt_keyword in text:
                             return alt_message
+                        else:
+                            return message
                 else:
                     return message
 

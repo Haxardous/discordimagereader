@@ -1,6 +1,6 @@
 agenda_messages = {
     "banned": {
-        "keywords": ["You were banned by MTA"],
+        "keywords": ["You were banned by MTA", "Orkniowenne: MTA", "[CD47]"],
         "reply_message": "If you have been globally banned on MTA, please read our ban appeals "
                          "section: https://forum.mtasa.com/forum/180-ban-appeals/",
         "alt_message": "time_banned"
