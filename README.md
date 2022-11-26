@@ -6,7 +6,7 @@
 
 ### Usage
 
-- Add a new argument via `messages.py`
+- Add a new argument via `/agenda_messages.json`
 - message formula: 
 
 ```py
