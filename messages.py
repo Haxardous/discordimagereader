@@ -1,13 +1,15 @@
 agenda_messages = {
     "banned": {
         "keywords": ["You were banned by MTA", "Orkniowenne: MTA", "[CD47]"],
+        "regex": "",
         "reply_message": "If you have been globally banned on MTA, please read our ban appeals "
                          "section: https://forum.mtasa.com/forum/180-ban-appeals/",
         "alt_message": "time_banned"
     },
 
     "out_of_memory": {
-        "keywords": ["ox003C91CC", "0x003C91CC"],
+        "keywords": ["0x003C91CC"],
+        "regex": "[oO0]x..3C91CC",
         "reply_message": "Out of video memory. This can happen on servers with unoptimized mods "
                          "and (faulty) scripts that abuse video memory, or even when you have a "
                          "powerful graphics card in case the stuff on a server is extremely "
@@ -20,6 +22,7 @@ agenda_messages = {
 
     "time_banned": {
         "keywords": ["Time Remaining"],
+        "regex": "",
         "reply_message": "You have been banned from MTA temporarily, you cannot appeal for a timed ban, please wait "
                          "for you ban to expire ",
         "alt_message": ""
