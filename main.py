@@ -16,7 +16,7 @@ class MyClient(discord.Client):
                 image_statement = read_image_text(message.attachments[0].url)
                 if not image_statement == "Nothing":
                     messages_agenda_dict = get_messages_agenda_dict()
-                    await message.reply(messages_agenda_dict[image_statement])
+                    await message.reply(messages_agenda_dict[image_statement]["reply_message"])
 
 
 intents = discord.Intents.default()

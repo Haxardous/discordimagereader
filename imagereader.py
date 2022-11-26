@@ -1,6 +1,7 @@
 from PIL import Image
 from pytesseract import pytesseract
 import requests
+from messages import *
 
 # path where tesseract is installed in.
 path_to_tesseract = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -20,13 +21,13 @@ def read_image_text(link):
 
 
 def check_message_content(text):
-    if 'You were banned by MTA' in text:
-        if 'Time Remaining' in text:
-            return "time_banned"
-        else:
-            return "banned"
-
-    if 'ox003C91CC' in text:  # 0x003C91CC
-        return "out_of_memory"
+    messages_agenda = get_messages_agenda_dict()
+    for message in messages_agenda:
+        for keyword in messages_agenda[message]["keywords"]:
+            if keyword in text:
+                return message
 
     return "Nothing"
+
+
+
