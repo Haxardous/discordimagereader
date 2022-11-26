@@ -25,9 +25,13 @@ def check_message_content(text):
     for message in messages_agenda:
         for keyword in messages_agenda[message]["keywords"]:
             if keyword in text:
-                return message
+                # check if the keywords has an alt
+                if not messages_agenda[message]["alt_message"] == "":
+                    alt_message = messages_agenda[message]["alt_message"]
+                    for alt_keyword in messages_agenda[alt_message]["keywords"]:
+                        if alt_keyword in text:
+                            return alt_message
+                else:
+                    return message
 
     return "Nothing"
-
-
-

@@ -2,7 +2,8 @@ agenda_messages = {
     "banned": {
         "keywords": ["You were banned by MTA"],
         "reply_message": "If you have been globally banned on MTA, please read our ban appeals "
-                         "section: https://forum.mtasa.com/forum/180-ban-appeals/"
+                         "section: https://forum.mtasa.com/forum/180-ban-appeals/",
+        "alt_message": "time_banned"
     },
 
     "out_of_memory": {
@@ -13,13 +14,15 @@ agenda_messages = {
                          "unoptimized so that it starts hitting GTA limits. If you have a powerful "
                          "graphics card and more players suffer from this crash type, inform the "
                          "server owner of this problem as it probably means their scripters & "
-                         "designers don't know what they are doing."
+                         "designers don't know what they are doing.",
+        "alt_message": ""
     },
 
     "time_banned": {
         "keywords": ["Time Remaining"],
         "reply_message": "You have been banned from MTA temporarily, you cannot appeal for a timed ban, please wait "
-                         "for you ban to expire "
+                         "for you ban to expire ",
+        "alt_message": ""
     }
 }
 
